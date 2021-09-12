@@ -32,9 +32,19 @@ namespace ElephantSwapExercise
                     lucinda = tempElephant;
                     Console.WriteLine("References have been swapped.");
                 }
+                else if (userInput == '4')
+                {
+                    lloyd = lucinda;
+                    lloyd.EarSize = 4321;
+                    lloyd.WhoAmI();
+                }
+                else if (userInput == '5')
+                {
+                    lucinda.SpeakTo(lloyd, "Hi, Lloyd!");
+                }
                 else
                 {
-                    throw new ArgumentException("Unknown input from the user.");
+                    return;
                 }
                 Console.WriteLine();
 
